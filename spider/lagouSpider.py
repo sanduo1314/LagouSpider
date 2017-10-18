@@ -69,7 +69,7 @@ def search(keyword,filename,isFist,UA):
     while pageNO != 0:
         pn += 1
         #json文件格式化
-        json_data = json.loads(get_job_json(request_url, pn, UA_list[int_random()],searchinfo))
+        json_data = json.loads(get_job_json(request_url, pn, UA_list[int_random()],searchinfo).decode("utf-8"))
 
         print(json_data)
         #查询当前的时间
